@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Clone</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'uber-black': '#000000',
+                        'uber-white': '#FFFFFF',
+                        'uber-gray': '#EEEEEE',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-uber-black">Uber</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-700 hover:text-black">Company</a>
+                <a href="#" class="text-gray-700 hover:text-black">Safety</a>
+                <a href="#" class="text-gray-700 hover:text-black">Help</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-700 hover:text-black px-4 py-2">Log in</button>
+                <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">Sign up</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-4 py-12">
+            <h1 class="text-5xl font-bold mb-8">Go anywhere with Uber</h1>
+            
+            <!-- Ride Options -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-2xl mr-4"></i>
+                        <h2 class="text-xl font-semibold">Ride</h2>
+                    </div>
+                    
+                    <!-- Ride Form -->
+                    <form class="space-y-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Pickup location" class="w-full p-3 border rounded-lg">
+                            <i class="fas fa-map-marker-alt absolute right-3 top-3 text-gray-400"></i>
+                        </div>
+                        <div class="relative">
+                            <input type="text" placeholder="Dropoff location" class="w-full p-3 border rounded-lg">
+                            <i class="fas fa-map-marker-alt absolute right-3 top-3 text-gray-400"></i>
+                        </div>
+                        <button class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800">
+                            See prices
+                        </button>
+                    </form>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-key text-2xl mr-4"></i>
+                        <h2 class="text-xl font-semibold">Rent</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">Your perfect rental car is a few clicks away. Learn more about Uber Rent.</p>
+                    <button class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800">
+                        Find a car
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggestions Section -->
+        <section class="bg-gray-50 py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8">Suggestions</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Rental Cars -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4">Rental Cars</h3>
+                        <p class="text-gray-600 mb-4">Your perfect rental car is a few clicks away. Learn more about Uber Rent.</p>
+                        <button class="text-black font-semibold hover:underline">Details →</button>
+                    </div>
+
+                    <!-- Reserve -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4">Reserve</h3>
+                        <p class="text-gray-600 mb-4">Reserve your ride in advance and relax on the day of travel.</p>
+                        <button class="text-black font-semibold hover:underline">Details →</button>
+                    </div>
+
+                    <!-- Ride -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4">Ride</h3>
+                        <p class="text-gray-600 mb-4">Go anywhere with Uber. Request a ride, hop in, and go.</p>
+                        <button class="text-black font-semibold hover:underline">Details →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Activity Section -->
+        <section class="container mx-auto px-4 py-12">
+            <h2 class="text-3xl font-bold mb-8">Log in to see your recent activity</h2>
+            <p class="text-gray-600 mb-8">View past trips, tailored suggestions, support resources, and more.</p>
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">
+                    Log in to your account
+                </button>
+                <button class="text-black hover:text-gray-600">
+                    Don't have an Uber account? Sign up
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">About us</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Our offerings</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Newsroom</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Investors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Ride</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Drive</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Deliver</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Rent</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Global citizenship</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Safety</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Diversity and Inclusion</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Travel</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Airports</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Cities</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700">
+                <div class="flex flex-wrap justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-2xl font-bold">Uber</a>
+                        <span class="text-gray-400">© 2024 Uber Technologies Inc.</span>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
